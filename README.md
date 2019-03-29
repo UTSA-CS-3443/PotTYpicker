@@ -1,4 +1,4 @@
 # PotTYpicker
 Spring 2019 - Walking Data Structures
 
-![alt text](https://raw.githubusercontent.com/e76971072/PotTYpicker/master/image/Login_Controller.png
+![alt text](https://github.com/UTSA-CS-3443/PotTYpicker/blob/master/image/Login_Controller.png)
