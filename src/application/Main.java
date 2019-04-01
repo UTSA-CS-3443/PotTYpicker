@@ -2,19 +2,20 @@ package application;
 	
 import javafx.application.Application;
 import javafx.stage.Stage;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.layout.BorderPane;
+import javafx.fxml.FXMLLoader;
 
 
 public class Main extends Application {
-	@Override
+	public static Stage stage;
 	public void start(Stage primaryStage) {
 		try {
-			BorderPane root = new BorderPane();
-			Scene scene = new Scene(root,400,400);
-			scene.getStylesheets().add(getClass().getResource("application.css").toExternalForm());
-			primaryStage.setScene(scene);
+			Parent root = (Parent) FXMLLoader.load(getClass().getResource("view/login.fxml"));
+			primaryStage.setScene(new Scene(root, 800, 800));
 			primaryStage.show();
+			stage = primaryStage;
 		} catch(Exception e) {
 			e.printStackTrace();
 		}
