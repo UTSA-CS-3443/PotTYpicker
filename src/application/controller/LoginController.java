@@ -28,6 +28,6 @@ public class LoginController implements Initializable {
 	}
 	public void login (ActionEvent event) {
 		String user = username.getText(); 
-		String pass = password.getText(); 
+		String pass = password.getText();
 	}
 }

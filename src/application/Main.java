@@ -10,6 +10,7 @@ import javafx.fxml.FXMLLoader;
 
 public class Main extends Application {
 	public static Stage stage;
+	
 	public void start(Stage primaryStage) {
 		try {
 			Parent root = (Parent) FXMLLoader.load(getClass().getResource("view/Login.fxml"));
