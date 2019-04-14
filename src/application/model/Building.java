@@ -6,8 +6,8 @@ public class Building {
 	private File dir;
 	private String name;
 	
-	public Building(String dirPath) {
-		dir = new File(dirPath);
+	public Building(File file) {
+		dir = file;
 		name = dir.getName();
 	}
 	
