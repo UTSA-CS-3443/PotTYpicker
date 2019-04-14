@@ -4,10 +4,14 @@ import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
 
+import application.Main;
 import application.model.User;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -40,9 +44,11 @@ public class LoginController implements Initializable {
 		LoginController.user = new User(username.getText(), password.getText());
 		System.out.println(username.getText() + " " + password.getText() + "<");
 		try {
-			boolean isValid = LoginController.user.validate();
-			if (!isValid)
+			if (!LoginController.user.validate()) {
 				message.setText("Your username/password is incorrect.");
+			} else {
+				gotoSelection();
+			}
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
@@ -58,6 +64,17 @@ public class LoginController implements Initializable {
 			LoginController.user = User.newUser(username.getText(), password.getText());
 			message.setText("Successfully registered");
 		} catch (IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
+	private void gotoSelection() {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("../view/Selection.fxml"));
+			Main.stage.setScene(new Scene(root, 800, 800));
+			Main.stage.show();
+
+		} catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
