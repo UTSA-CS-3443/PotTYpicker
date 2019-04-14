@@ -11,8 +11,8 @@ public class UserReview {
 	private int restroomRating;
 	private int commentPopularity;
 	
-	public UserReview( String commont, String user, int rating, int popularity) {
-		this.setComment(commont);
+	public UserReview( String comment, String user, int rating, int popularity) {
+		this.setComment(comment);
 		this.setUserName(user);
 		this.setRestroomRating(rating);
 		this.setCommentPopularity(popularity);
@@ -58,7 +58,4 @@ public class UserReview {
 	public void setCommentPopularity(int commentPopularity) {
 		this.commentPopularity = commentPopularity;
 	}
-	
-	
-
 }

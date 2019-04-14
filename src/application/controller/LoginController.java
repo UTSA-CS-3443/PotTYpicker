@@ -32,8 +32,7 @@ public class LoginController implements Initializable {
 	public static User user;
 	
 	public void initialize(URL location, ResourceBundle resources) {
-		// TODO Auto-generated method stub
-		
+		LoginController.user = null;
 	}
 	
 	/**
