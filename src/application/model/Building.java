@@ -3,8 +3,13 @@ package application.model;
 import java.io.File;
 import java.util.ArrayList;
 
+import javafx.scene.control.Tooltip;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+
 public class Building {
 	private File dir;
+	private Image image; 
 	private String name;
 	private ArrayList<Restroom> restrooms;
 	
@@ -18,6 +23,16 @@ public class Building {
 		}
 	}
 	
+	public Image getImage() {
+		Tooltip tt = new Tooltip ();
+		tt.setGraphic(new ImageView (image));
+		return image;
+	}
+
+	public void setImage(Image image) {
+		this.image = image;
+	}
+
 	public String toString() {
 		return this.name;
 	}

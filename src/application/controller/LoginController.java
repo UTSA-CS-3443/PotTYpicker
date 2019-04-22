@@ -41,7 +41,6 @@ public class LoginController implements Initializable {
 	 */
 	public void login (ActionEvent event) {
 		LoginController.user = new User(username.getText(), password.getText());
-		System.out.println(username.getText() + " " + password.getText() + "<");
 		try {
 			if (!LoginController.user.validate()) {
 				message.setText("Your username/password is incorrect.");

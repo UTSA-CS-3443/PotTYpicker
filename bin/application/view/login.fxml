@@ -53,7 +53,7 @@
             <Image url="@../../../image/security.png" />
          </image>
       </ImageView>
-      <Button ellipsisString="" layoutX="428.0" layoutY="413.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #fc6e51;" text="LOGIN">
+      <Button fx:id="login" ellipsisString="" layoutX="428.0" layoutY="413.0" mnemonicParsing="false" onAction="#login" style="-fx-background-color: #fc6e51;" text="LOGIN">
          <font>
             <Font name="System Italic" size="13.0" />
          </font>
