@@ -10,5 +10,7 @@ PotTYpicker is your go-to application for user rated reviews on the best and the
 Known Bugs:
 
 Login Info:
+
 	username: user
+	
 	password: password
