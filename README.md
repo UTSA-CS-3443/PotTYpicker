@@ -1,5 +1,6 @@
 # PotTYpicker
 Spring 2019 - Walking Data Structures
+
 Danny Doan, Kevin Nguyen, Lee Reese, Diego Reyes, Chris Stromer
 
 ![alt text](https://github.com/UTSA-CS-3443/PotTYpicker/blob/master/image/Login_Controller.png)
