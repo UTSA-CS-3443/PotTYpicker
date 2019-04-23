@@ -17,6 +17,7 @@
                   <Image url="@../../../image/Toilet-2.png" />
                </image>
             </ImageView>
+            <Button fx:id="hover" layoutX="113.0" layoutY="207.0" mnemonicParsing="false" onAction="#hover" text="Button" />
          </children>
       </AnchorPane>
       <ComboBox fx:id="buildingDropDown" layoutX="75.0" layoutY="57.0" prefWidth="170.0" promptText="BUILDING" />
