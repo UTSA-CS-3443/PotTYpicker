@@ -2,8 +2,12 @@ package application.controller;
 
 import java.io.File;
 
+import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
@@ -94,5 +98,15 @@ public class UserReviewController {
 		after_submit.setText("Your review submitted successfully");
 		after_submit.setFont(new Font("American Typewriter", 15));
 		after_submit.setTextFill(Color.web("#32CD32"));
+	}
+	public void map_redirect () {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("../view/Map.fxml"));
+			Main.stage.setScene(new Scene(root, 800, 800));
+			Main.stage.show();
+
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

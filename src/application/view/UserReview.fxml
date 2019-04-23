@@ -27,7 +27,7 @@
                   </Button>
                   <Separator orientation="VERTICAL" prefHeight="6.0" prefWidth="6.0" />
                   <Separator prefWidth="200.0" />
-                  <Button mnemonicParsing="false" prefHeight="59.0" prefWidth="226.0" style="-fx-background-color: #202a3a;" text="Map" textFill="#aea4a4">
+                  <Button fx:id="map_redirect" mnemonicParsing="false" onAction="#map_redirect" prefHeight="59.0" prefWidth="226.0" style="-fx-background-color: #202a3a;" text="Map" textFill="#aea4a4">
                      <font>
                         <Font size="18.0" />
                      </font>
