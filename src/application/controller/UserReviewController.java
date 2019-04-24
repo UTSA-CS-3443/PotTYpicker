@@ -1,6 +1,7 @@
 package application.controller;
 
 import java.io.File;
+import java.io.IOException;
 
 import application.Main;
 import javafx.event.ActionEvent;
@@ -176,13 +177,23 @@ public class UserReviewController {
 
 			}
 		}
+	public void displayOverview(ActionEvent Event) {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("../view/Overview.fxml"));
+			Main.stage.setScene(new Scene(root, 800, 800));
+			Main.stage.show();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+	}
 	public void submit (ActionEvent Event) {
 		System.out.println (text_review.getText());
 		after_submit.setText("Your review submitted successfully");
 		after_submit.setFont(new Font("American Typewriter", 15));
 		after_submit.setTextFill(Color.web("#32CD32"));
 		TextField name = new TextField ();
-		name.setText(String.valueOf(this.rating_stars));
+		name.setText(String.valueOf(this.rating_stars + "/5"));
 		father.getChildren().add(name);
 	}
 	public void map_redirect () {
