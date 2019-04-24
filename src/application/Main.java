@@ -13,7 +13,7 @@ public class Main extends Application {
 	
 	public void start(Stage primaryStage) {
 		try {
-			Parent root = (Parent) FXMLLoader.load(getClass().getResource("view/Map.fxml"));
+			Parent root = (Parent) FXMLLoader.load(getClass().getResource("view/UserReview.fxml"));
 			primaryStage.setScene(new Scene(root, 800, 800));
 			primaryStage.show();
 			stage = primaryStage;
@@ -21,7 +21,6 @@ public class Main extends Application {
 			e.printStackTrace();
 		}
 	}
-	
 	public static void main(String[] args) {
 		launch(args);
 	}

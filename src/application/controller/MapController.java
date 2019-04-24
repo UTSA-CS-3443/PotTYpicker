@@ -25,8 +25,7 @@ public class MapController  {
 		StackPane  root = new StackPane ();
 		WebView web = new WebView (); 
 		WebEngine engine = web.getEngine();
-		System.out.println ("Hello There");
-		engine.load("https://www.google.com");
+		engine.load("https://www.utsa.edu/visit/main-campus.html");
 		root.getChildren().add(web);
 		father.getChildren().add(root);
 	}
