@@ -60,7 +60,9 @@ public class User {
 		while(userScan.hasNextLine()) {
 			String line = userScan.nextLine();
 			String[] tokens = line.split(",");
-			System.out.println(tokens[0] + " " + tokens[1]);
+			if (tokens.length < 2) {
+				continue;
+			}
 			if (this.getUsername().equals(tokens[0]) && this.getPassword().equals(tokens[1])) {
 				userScan.close();
 				return true;
@@ -83,6 +85,9 @@ public class User {
 		while(userScan.hasNextLine()) {
 			String line = userScan.nextLine();
 			String[] tokens = line.split(",");
+			if (tokens.length < 2) {
+				continue;
+			}
 			if (username.equals(tokens[0])) {
 				userScan.close();
 				return false;
