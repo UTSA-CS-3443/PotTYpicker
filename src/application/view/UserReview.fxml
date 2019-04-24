@@ -62,16 +62,16 @@
                   <Image url="@../../../rating/empty.png" />
                </image>
             </ImageView>
-            <Button fx:id="button1" layoutX="404.0" layoutY="307.0" mnemonicParsing="false" onAction="#button1" prefHeight="48.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="button1" layoutX="404.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#event1" prefHeight="48.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
             <ImageView fx:id="popup" fitHeight="130.0" fitWidth="144.0" layoutX="458.0" layoutY="136.0" pickOnBounds="true" preserveRatio="true">
                <image>
                   <Image url="@../../../rating/gold-star.png" />
                </image>
             </ImageView>
-            <Button fx:id="button2" layoutX="463.0" layoutY="307.0" mnemonicParsing="false" onAction="#button2" prefHeight="48.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
-            <Button fx:id="button3" layoutX="520.0" layoutY="309.0" mnemonicParsing="false" onAction="#button3" prefHeight="48.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
-            <Button fx:id="button4" layoutX="575.0" layoutY="309.0" mnemonicParsing="false" onAction="#button4" prefHeight="48.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
-            <Button fx:id="button5" layoutX="638.0" layoutY="309.0" mnemonicParsing="false" onAction="#button5" prefHeight="48.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="button2" layoutX="463.0" layoutY="307.0" mnemonicParsing="false" onMouseClicked="#event2" prefHeight="48.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="button3" layoutX="520.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#event3" prefHeight="48.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="button4" layoutX="575.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#event4" prefHeight="48.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
+            <Button fx:id="button5" layoutX="638.0" layoutY="309.0" mnemonicParsing="false" onMouseClicked="#event5" prefHeight="48.0" prefWidth="42.0" style="-fx-background-color: transparent;" />
             <Button fx:id="submit" layoutX="603.0" layoutY="692.0" mnemonicParsing="false" onAction="#submit" text="Leave a Review" />
             <Label fx:id="after_submit" layoutX="369.0" layoutY="719.0" prefHeight="33.0" prefWidth="280.0" />
          </children>
