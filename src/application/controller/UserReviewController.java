@@ -48,7 +48,8 @@ public class UserReviewController {
 						double y = rate1.getY(); 
 						Image image = new Image (file.toURI().toString());
 						rate1.setImage(image);
-						this.rating_stars = this.rating_stars + 1;  
+						this.rating_stars = this.rating_stars - 2; 
+						System.out.println(this.rating_stars);
 					}
 				}
 			}
@@ -59,7 +60,8 @@ public class UserReviewController {
 							double y = rate1.getY(); 
 							Image image = new Image (file.toURI().toString());
 							rate1.setImage(image);
-							this.rating_stars = this.rating_stars-1; 
+							this.rating_stars = this.rating_stars + 1; 
+							System.out.println(this.rating_stars);
 						}
 					}
 				}
@@ -73,7 +75,9 @@ public class UserReviewController {
 					if (file.getName().equalsIgnoreCase("empty.png")) {
 						Image image = new Image (file.toURI().toString());
 						rate2.setImage(image);
-						this.rating_stars = this.rating_stars + 1;  
+						this.rating_stars = this.rating_stars - 2;  
+						System.out.println (this.rating_stars);
+
 					}
 				}
 			}
@@ -83,7 +87,9 @@ public class UserReviewController {
 						if (file.getName().equalsIgnoreCase("gold-star.png")) {
 							Image image = new Image (file.toURI().toString());
 							rate2.setImage(image);
-							this.rating_stars = this.rating_stars-1; 
+							this.rating_stars = this.rating_stars + 1; 
+							System.out.println (this.rating_stars);
+
 						}
 					}
 				}
@@ -96,7 +102,9 @@ public class UserReviewController {
 					if (file.getName().equalsIgnoreCase("empty.png")) {
 						Image image = new Image (file.toURI().toString());
 						rate4.setImage(image);
-						this.rating_stars = this.rating_stars + 1; 
+						this.rating_stars = this.rating_stars - 2; 
+						System.out.println (this.rating_stars);
+
 					}
 				}
 			}
@@ -106,7 +114,9 @@ public class UserReviewController {
 						if (file.getName().equalsIgnoreCase("gold-star.png")) {
 							Image image = new Image (file.toURI().toString());
 							rate4.setImage(image);
-							this.rating_stars = this.rating_stars-1; 
+							this.rating_stars = this.rating_stars + 1; 
+							System.out.println (this.rating_stars);
+
 						}
 					}
 				}
@@ -119,7 +129,9 @@ public class UserReviewController {
 					if (file.getName().equalsIgnoreCase("empty.png")) {
 						Image image = new Image (file.toURI().toString());
 						rate3.setImage(image);
-						this.rating_stars++; 
+						this.rating_stars = this.rating_stars - 2; 
+						System.out.println (this.rating_stars);
+
 					}
 				}
 			}
@@ -129,7 +141,9 @@ public class UserReviewController {
 						if (file.getName().equalsIgnoreCase("gold-star.png")) {
 							Image image = new Image (file.toURI().toString());
 							rate3.setImage(image);
-							this.rating_stars = this.rating_stars - 1;   
+							this.rating_stars = this.rating_stars + 1;   
+							System.out.println (this.rating_stars);
+
 						}
 					}
 				}
@@ -139,11 +153,10 @@ public class UserReviewController {
 		File home = new File ("rating");
 			if(mouseEvent.getClickCount() % 2 == 0 ){
 				for (File file: home.listFiles()){
-					System.out.println (mouseEvent.getClickCount());
 					if (file.getName().equalsIgnoreCase("empty.png")) { 
 						Image image = new Image (file.toURI().toString());
 						rate5.setImage(image);
-						this.rating_stars++; 
+						this.rating_stars = this.rating_stars - 2; 
 						System.out.println (this.rating_stars);
 					}
 				}
@@ -154,7 +167,9 @@ public class UserReviewController {
 						if (file.getName().equalsIgnoreCase("gold-star.png")) {
 							Image image = new Image (file.toURI().toString());
 							rate5.setImage(image);
-							this.rating_stars = this.rating_stars - 1; 
+							this.rating_stars = this.rating_stars + 1; 
+							System.out.println (this.rating_stars);
+
 						}
 					}
 				}
