@@ -37,6 +37,7 @@ public class MapController  {
 		WebView web = new WebView (); 
 		WebEngine engine = web.getEngine();
 		Button button = new Button ("Go Back");
+		button.setLayoutY(600);
 		engine.load("https://www.utsa.edu/visit/main-campus.html");
 		root1.getChildren().add(web);
 		father.getChildren().add(root1);

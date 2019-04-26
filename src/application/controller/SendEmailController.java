@@ -91,42 +91,42 @@ public class SendEmailController {
 */
 
 	public void toilet(ActionEvent Event) {
-		display.setText("Hello, I think one of your toilet is broken. Please come check it out");
+		display.setText("Hello, I think one of your toilets is broken. Please come check it out");
 		display.setFont(new Font("American Typewriter", 18));
 		display.setStyle("-fx-control-inner-background:#000000; -fx-font-family: Consolas; -fx-highlight-fill: #00ff00; -fx-text-fill: #00ff00; ");
 		display.setAlignment(Pos.TOP_LEFT);
 		this.subject = "SOMETHING WRONG WITH THE TOILET"; 
 	}
 	public void sink(ActionEvent Event) {
-		display.setText("Hello, I think one of your sink is broken. Please come check it out");
+		display.setText("Hello, I think one of your sinks is broken. Please come check it out");
 		display.setFont(new Font("American Typewriter", 18));
 		display.setStyle("-fx-control-inner-background:#000000; -fx-font-family: Consolas; -fx-highlight-fill: #00ff00; -fx-text-fill: #00ff00; ");
 		display.setAlignment(Pos.TOP_LEFT);
 		this.subject = "SOMEWRONG WITH THE SINK";
 	}
 	public void urinals(ActionEvent Event) {
-		display.setText("Hello, I think one of your urinal is broken. Please come check it out");
+		display.setText("Hello, I think one of your urinals is broken. Please come check it out");
 		display.setFont(new Font("American Typewriter", 18));
 		display.setStyle("-fx-control-inner-background:#000000; -fx-font-family: Consolas; -fx-highlight-fill: #00ff00; -fx-text-fill: #00ff00; ");
 		display.setAlignment(Pos.TOP_LEFT);
 		this.subject = "SOMETHING WRONG WITH URINALS";
 	}
 	public void hand_dryer(ActionEvent Event) {
-		display.setText("Hello, I think one of your hand dryer is broken. Please come check it out");
+		display.setText("Hello, I think one of your hand dryers is broken. Please come check it out");
 		display.setFont(new Font("American Typewriter", 18));
 		display.setStyle("-fx-control-inner-background:#000000; -fx-font-family: Consolas; -fx-highlight-fill: #00ff00; -fx-text-fill: #00ff00; ");
 		display.setAlignment(Pos.TOP_LEFT);
 		this.subject = "SOMETHING WRONG WITH HAND DRYER"; 
 	}
 	public void toilet_paper(ActionEvent Event) {
-		display.setText("Hello, I think there is no more toilet paper, \nCan please you exchange the toilet paper!");
+		display.setText("Hello, I think there is no more toilet paper, \nCan you please exchange the toilet paper!");
 		display.setFont(new Font("American Typewriter", 18));
 		display.setStyle("-fx-control-inner-background:#000000; -fx-font-family: Consolas; -fx-highlight-fill: #00ff00; -fx-text-fill: #00ff00; ");
 		display.setAlignment(Pos.TOP_LEFT);
 		this.subject = "NEED SOME TOILET PAPERS"; 
 	}
 	public void tower_paper(ActionEvent Event) {
-		display.setText("Hello, I think there is no more tower paper, \nCan please you exchange the toilet paper!");
+		display.setText("Hello, I think there is no more paper towers, \nCan you please exchange the paper towers");
 		display.setFont(new Font("American Typewriter", 18));
 		display.setStyle("-fx-control-inner-background:#000000; -fx-font-family: Consolas; -fx-highlight-fill: #00ff00; -fx-text-fill: #00ff00; ");
 		display.setAlignment(Pos.TOP_LEFT);
