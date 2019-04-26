@@ -9,9 +9,9 @@
    <children>
       <Button layoutX="33.0" layoutY="744.0" mnemonicParsing="false" onAction="#gotoUserReview" text="Leave a Review" />
       <ListView fx:id="commentView" layoutX="283.0" layoutY="142.0" prefHeight="371.0" prefWidth="418.0" />
-      <Label fx:id="roomNumber" layoutX="102.0" layoutY="52.0" text="Restoom room #" textFill="WHITE" />
-      <Label layoutX="283.0" layoutY="112.0" text="User Reviews" textFill="WHITE" />
-      <Label fx:id="buildingLabel" layoutX="102.0" layoutY="24.0" text="Building" textFill="WHITE" />
-      <Button fx:id="gotoLogin" layoutX="672.0" layoutY="28.0" mnemonicParsing="false" text="Logout" />
+      <Label fx:id="roomNumber" layoutX="102.0" layoutY="52.0" text="Restoom room #" />
+      <Label layoutX="283.0" layoutY="112.0" text="User Reviews" />
+      <Label fx:id="buildingLabel" layoutX="102.0" layoutY="24.0" text="Building" />
+      <Button layoutX="672.0" layoutY="28.0" mnemonicParsing="false" onAction="#gotoLogin" text="Logout" />
    </children>
 </AnchorPane>
