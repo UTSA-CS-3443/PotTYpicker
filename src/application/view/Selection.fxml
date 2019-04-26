@@ -20,12 +20,12 @@
             <Button fx:id="hover" layoutX="113.0" layoutY="207.0" mnemonicParsing="false" text="Button" />
          </children>
       </AnchorPane>
-      <ComboBox fx:id="buildingDropDown" layoutX="75.0" layoutY="57.0" prefWidth="170.0" promptText="BUILDING" />
+      <ComboBox fx:id="buildingDropDown" layoutX="75.0" layoutY="57.0" onAction="#pickBuilding" prefWidth="170.0" promptText="BUILDING" />
       <Button layoutX="658.0" layoutY="7.0" mnemonicParsing="false" onAction="#gotoLogin" prefHeight="46.0" prefWidth="124.0" style="-fx-background-color: Transparent;" text="LOGOUT" textFill="#fff8f8">
          <font>
             <Font name="American Typewriter Bold" size="14.0" />
          </font></Button>
-      <ComboBox fx:id="restroomDropDown" layoutX="325.0" layoutY="57.0" prefWidth="150.0" promptText="RESTROOM" />
+      <ComboBox fx:id="restroomDropDown" layoutX="325.0" layoutY="57.0" onAction="#pickRestroom" prefWidth="150.0" promptText="RESTROOM" />
       <Button layoutX="545.0" layoutY="57.0" mnemonicParsing="false" onAction="#gotoReviews" prefHeight="27.0" prefWidth="61.0" text="GO!" />
    </children>
 </AnchorPane>

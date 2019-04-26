@@ -14,12 +14,12 @@ public class Building {
 	private ArrayList<Restroom> restrooms;
 	
 	public Building(File file) {
-		dir = file;
-		name = dir.getName();
-		restrooms = new ArrayList<Restroom>();
+		this.dir = file;
+		this.name = dir.getName();
+		this.restrooms = new ArrayList<Restroom>();
 		for (File fileEntry : dir.listFiles()) {
 			if (fileEntry.isDirectory())
-				restrooms.add(new Restroom(file));
+				this.restrooms.add(new Restroom(fileEntry));
 		}
 	}
 	

@@ -130,7 +130,7 @@ public class SendEmailController {
 		this.subject = "NEED SOME PAPER TOWERS"; 
 	}
 	public void SubmitRequest (ActionEvent Event) {
-		String to = "an.nguyen1197@gmail.com";
+		String to = "leereese3@gmail.com";
 
 		// Sender's email ID needs to be mentioned
 		String from = "muahua51@gmail.com";

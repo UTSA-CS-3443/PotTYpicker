@@ -98,6 +98,13 @@ public class User {
 	}
 	
 	/**
+	 * toString which does nothing more than getUsername. Pretty cool, huh?
+	 */
+	public String toString() {
+		return this.getUsername();
+	}
+	
+	/**
 	 * Get this user's username
 	 * @return The username
 	 */

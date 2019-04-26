@@ -1,4 +1,9 @@
 package application.model;
+
+import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
+
 /**
  * The review class represents the user review on the RestRoom. The user review includes the actual comment, the name of the user,
  * a bathroom rating based on a 0 to 5 scale, and an overall score based on upvotes and downvotes.
@@ -18,11 +23,27 @@ public class UserReview {
 		this.setCommentPopularity(popularity);
 	}
 	
+	public void writeReview(Restroom restroom) {
+		String fileName = this.getUserName() + ".txt";
+		fileName = restroom.getDir().getAbsolutePath() + "/" + fileName;
+		
+		File writeFile = new File(fileName);
+		try {
+			writeFile.createNewFile();
+			FileWriter writer = new FileWriter(writeFile);
+			writer.write(this.getCommentPopularity() + "\n");
+			writer.write(this.getRestroomRating()  + "\n");
+			writer.write(this.getComment());
+			writer.close();
+		} catch(IOException e) {
+			e.printStackTrace();
+		}
+	}
+	
 	public String toString() {
 		
-		String printIt =  userName + " rated this potty a: " + restroomRating + "\n\n";
-		printIt += "What were " + userName + ",s thoughts on this potty?\n" + comment + "\n";
-		printIt += "How accurate was this comment? Comment Score: " + commentPopularity;
+		String printIt =  userName + " rated this restroom " + restroomRating + "/5\n\n";
+		printIt += comment + "\n";
 		
 		return printIt;
 	}
