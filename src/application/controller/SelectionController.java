@@ -23,7 +23,7 @@ import javafx.scene.text.Font;
 
 public class SelectionController {
 	@FXML
-	ComboBox<Button> buildingDropDown;
+	ComboBox<Building> buildingDropDown;
 	
 	@FXML
 	ComboBox<Restroom> restroomDropDown;
@@ -36,46 +36,50 @@ public class SelectionController {
 	
 	
 	public static Restroom restroom;
-	public static Building building;
-	private HashMap<Button, Building> buttonMap;
 	
-	public void initialize() throws FileNotFoundException {
-		this.buttonMap = new HashMap();
-		File homeDir = new File("data");
-		File image_home = new File ("image");
-		for (File file : homeDir.listFiles() ) {
+//	public void initialize() throws FileNotFoundException {
+//		this.buttonMap = new HashMap();
+//		File homeDir = new File("data");
+//		File image_home = new File ("image");
+//		for (File file : homeDir.listFiles() ) {
+//			if (file.isDirectory()) {
+//				Button button = new Button(file.getName());
+//				for (File f: image_home.listFiles()) {
+//					if ( file.getName().equalsIgnoreCase(f.getName().substring(0,f.getName().length()-4))) {
+//						/* Make the image */
+//						Image image = new Image (f.toURI().toString());
+//						ImageView imageview = new ImageView (image);
+//						imageview.setFitHeight(250.0);
+//						imageview.setFitWidth(300.0);
+//						
+//						/* Place image in tooltip */
+//						Tooltip tt = new Tooltip (); 
+//						tt.setGraphic(imageview);
+//						
+//						/* Add hovering image to combobox items */
+//						button.setTooltip(tt);
+//						button.setStyle("-fx-background-color: #333952");
+//						button.setFont(new Font("American Typewriter", 20));
+//						button.setTextFill(Color.web("#ffffff"));
+//						button.setMinWidth(buildingDropDown.getPrefWidth());
+//						buildingDropDown.getItems().add(button);
+//					}
+//				}
+//			}
+//		}
+//		buildingDropDown.setOnAction((event)->{
+//			System.out.println (buildingDropDown.getSelectionModel().getSelectedItem().getText());
+//			System.out.println ("Hello");
+//		});
+//	}
+	
+	public void initialize() {
+		File buildings = new File("data");
+		for (File file : buildings.listFiles()) {
 			if (file.isDirectory()) {
-				Button button = new Button(file.getName());
-				for (File f: image_home.listFiles()) {
-					if ( file.getName().equalsIgnoreCase(f.getName().substring(0,f.getName().length()-4))) {
-						/* Make the image */
-						Image image = new Image (f.toURI().toString());
-						ImageView imageview = new ImageView (image);
-						imageview.setFitHeight(250.0);
-						imageview.setFitWidth(300.0);
-						
-						/* Place image in tooltip */
-						Tooltip tt = new Tooltip (); 
-						tt.setGraphic(imageview);
-						
-						/* Add hovering image to combobox items */
-						button.setTooltip(tt);
-						button.setStyle("-fx-background-color: #333952");
-						button.setFont(new Font("American Typewriter", 20));
-						button.setTextFill(Color.web("#ffffff"));
-						button.setMinWidth(buildingDropDown.getPrefWidth());
-						buildingDropDown.getItems().add(button);
-						
-						/* Associate building with button so we can get it later */ 
-						buttonMap.put(button, new Building(file));
-					}
-				}
+				buildingDropDown.getItems().add(new Building(file));
 			}
 		}
-		buildingDropDown.setOnAction((event)->{
-			System.out.println (buildingDropDown.getSelectionModel().getSelectedItem().getText());
-			System.out.println ("Hello");
-		});
 	}
 	
 	/**
@@ -97,12 +101,12 @@ public class SelectionController {
 	 */
 	public void gotoReviews(ActionEvent event) {
 		/* If no selction, do nothing */
-		if (SelectionController.restroom == null || SelectionController.building == null) {
+		if (SelectionController.restroom == null) {
 			return;
 		}
 		
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("../view/Reviews.fxml"));
+			Parent root = FXMLLoader.load(getClass().getResource("../view/Overview.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();
 
@@ -112,13 +116,12 @@ public class SelectionController {
 	}
 	
 	public void pickBuilding(ActionEvent event) {
-		Button pressed = (Button) event.getSource();
-		SelectionController.building = buttonMap.get(pressed);
-		
-		/* populate restroom dropdown */
+		Building building = this.buildingDropDown.getValue();
+		this.restroomDropDown.getItems().clear();
+		this.restroomDropDown.getItems().addAll(building.getRestrooms());
 	}
 	
 	public void pickRestroom(ActionEvent event) {
-		
+		SelectionController.restroom = this.restroomDropDown.getValue();
 	}
 }

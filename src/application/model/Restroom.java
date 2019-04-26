@@ -7,8 +7,8 @@ public class Restroom {
 	private String roomNumber;
 	
 	public Restroom(File file) {
-		dir = file;
-		roomNumber = dir.getName();
+		this.dir = file;
+		this.roomNumber = dir.getName();
 	}
 	
 	public String toString() {
