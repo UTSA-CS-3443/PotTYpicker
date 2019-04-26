@@ -46,6 +46,7 @@ public class UserReviewController {
 		this.rating_stars = 0;
 	}
 
+
 	public void event1(MouseEvent mouseEvent) {
 		File home = new File ("rating");
 		if(mouseEvent.getClickCount() % 2 == 0 ){
@@ -54,19 +55,22 @@ public class UserReviewController {
 					double y = rate1.getY(); 
 					Image image = new Image (file.toURI().toString());
 					rate1.setImage(image);
-					//this.rating_stars = this.rating_stars - 2;
-					this.rating_stars-= 2;
+					this.rating_stars -= 2; 
 					System.out.println(this.rating_stars);
 				}
 			}
-		} else {
+		}
+		
+		else {
 			if(mouseEvent.getClickCount() % 1 == 0 ){
 				for (File file: home.listFiles()){
 					if (file.getName().equalsIgnoreCase("gold-star.png")) {
 						double y = rate1.getY(); 
 						Image image = new Image (file.toURI().toString());
 						rate1.setImage(image);
-						//this.rating_stars = this.rating_stars + 1;
+
+						this.rating_stars++; 
+					//this.rating_stars = this.rating_stars + 1;
 						this.rating_stars++; 
 						System.out.println(this.rating_stars);
 					}
@@ -75,7 +79,7 @@ public class UserReviewController {
 
 		}
 	}
-	
+
 	public void event2(MouseEvent mouseEvent) {
 		File home = new File ("rating");
 		if(mouseEvent.getClickCount() % 2 == 0 ){
@@ -83,20 +87,30 @@ public class UserReviewController {
 				if (file.getName().equalsIgnoreCase("empty.png")) {
 					Image image = new Image (file.toURI().toString());
 					rate2.setImage(image);
+
+					this.rating_stars = this.rating_stars - 2;  
+
 					//this.rating_stars = this.rating_stars - 2;
 					this.rating_stars-= 2;
+
 					System.out.println (this.rating_stars);
 
 				}
 			}
-		} else {
+
+		}
+		 else {
 			if(mouseEvent.getClickCount() % 1 == 0 ){
 				for (File file: home.listFiles()){
 					if (file.getName().equalsIgnoreCase("gold-star.png")) {
 						Image image = new Image (file.toURI().toString());
 						rate2.setImage(image);
+
+						this.rating_stars = this.rating_stars + 1; 
+
 						//this.rating_stars = this.rating_stars + 1;
 						this.rating_stars++; 
+
 						System.out.println (this.rating_stars);
 					}
 				}
@@ -112,17 +126,22 @@ public class UserReviewController {
 				if (file.getName().equalsIgnoreCase("empty.png")) {
 					Image image = new Image (file.toURI().toString());
 					rate4.setImage(image);
-					//this.rating_stars = this.rating_stars - 2;
-					this.rating_stars-= 2;
+					this.rating_stars -= 2; 
 					System.out.println (this.rating_stars);
+
 				}
 			}
-		} else {
+		} 
+		else {
+ 
 			if(mouseEvent.getClickCount() % 1 == 0 ){
 				for (File file: home.listFiles()){
 					if (file.getName().equalsIgnoreCase("gold-star.png")) {
 						Image image = new Image (file.toURI().toString());
 						rate4.setImage(image);
+
+						this.rating_stars++; 
+
 						//this.rating_stars = this.rating_stars + 1;
 						this.rating_stars++; 
 						System.out.println (this.rating_stars);
@@ -133,7 +152,6 @@ public class UserReviewController {
 
 		}
 	}
-	
 	public void event3(MouseEvent mouseEvent) {
 		File home = new File ("rating");
 		if(mouseEvent.getClickCount() % 2 == 0 ){
@@ -141,18 +159,27 @@ public class UserReviewController {
 				if (file.getName().equalsIgnoreCase("empty.png")) {
 					Image image = new Image (file.toURI().toString());
 					rate3.setImage(image);
+
+					this.rating_stars = this.rating_stars - 2; 
+
 					//this.rating_stars = this.rating_stars - 2;
 					this.rating_stars-= 2;
+
 					System.out.println (this.rating_stars);
 
 				}
 			}
-		} else {
+		}
+		else {
+
 			if(mouseEvent.getClickCount() % 1 == 0 ){
 				for (File file: home.listFiles()){
 					if (file.getName().equalsIgnoreCase("gold-star.png")) {
 						Image image = new Image (file.toURI().toString());
 						rate3.setImage(image);
+
+						this.rating_stars = this.rating_stars + 1;   
+
 						//this.rating_stars = this.rating_stars + 1;
 						this.rating_stars++; 
 						System.out.println (this.rating_stars);
@@ -162,28 +189,35 @@ public class UserReviewController {
 			}
 
 		}
+
 	}
 	
 	public void event5(MouseEvent mouseEvent) {
+
 		File home = new File ("rating");
 		if(mouseEvent.getClickCount() % 2 == 0 ){
 			for (File file: home.listFiles()){
 				if (file.getName().equalsIgnoreCase("empty.png")) { 
 					Image image = new Image (file.toURI().toString());
 					rate5.setImage(image);
-					//this.rating_stars = this.rating_stars - 2;
-					this.rating_stars-= 2;
+
+					this.rating_stars -= 2; 
 					System.out.println (this.rating_stars);
 				}
 			}
-		} else {
+		}
+	 else {
 			if(mouseEvent.getClickCount() % 1 == 0 ){
 				for (File file: home.listFiles()){
 					if (file.getName().equalsIgnoreCase("gold-star.png")) {
 						Image image = new Image (file.toURI().toString());
 						rate5.setImage(image);
+
+						this.rating_stars = this.rating_stars + 1; 
+
 						//this.rating_stars = this.rating_stars + 1;
 						this.rating_stars++; 
+
 						System.out.println (this.rating_stars);
 
 					}
@@ -192,7 +226,7 @@ public class UserReviewController {
 
 		}
 	}
-	
+
 	public void displayOverview(ActionEvent Event) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("../view/Overview.fxml"));
@@ -213,10 +247,19 @@ public class UserReviewController {
 		UserReview newReview = new UserReview(text_review.getText(), LoginController.user.toString(), this.rating_stars, 0);
 		newReview.writeReview(SelectionController.restroom);
 	}
-	
 	public void map_redirect () {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("../view/Map.fxml"));
+			Main.stage.setScene(new Scene(root, 800, 800));
+			Main.stage.show();
+
+		} catch(Exception e) {
+			e.printStackTrace();
+		}
+	}
+	public void send () {
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("../view/SendEmail.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();
 

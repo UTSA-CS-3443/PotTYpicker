@@ -16,26 +16,28 @@ public class Restroom {
 		this.reviews = new ArrayList<UserReview>();
 		loadReviews();
 	}
+
+		public String toString() {
+			return this.roomNumber;
+		}
+
+		public String getRoomNumber() {
+			return this.roomNumber;
+		}
+
+		public void setName(String roomNumber) {
+			this.roomNumber = roomNumber;
+		}
+
+		public File getDir() {
+			return this.dir;
+		}
+
+		public void setDir(File dir) {
+			this.dir = dir;
+		}
 	
-	public String toString() {
-		return this.getRoomNumber();
-	}
 	
-	public String getRoomNumber() {
-		return this.roomNumber;
-	}
-	
-	public void setName(String roomNumber) {
-		this.roomNumber = roomNumber;
-	}
-	
-	public File getDir() {
-		return this.dir;
-	}
-	
-	public void setDir(File dir) {
-		this.dir = dir;
-	}
 	
 	public ArrayList<UserReview> getReviews() {
 		this.reviews.clear();
@@ -73,3 +75,4 @@ public class Restroom {
 		return data;
 	}
 }
+

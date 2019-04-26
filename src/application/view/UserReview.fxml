@@ -34,7 +34,10 @@
                   </Button>
                   <Separator orientation="VERTICAL" prefHeight="6.0" prefWidth="6.0" />
                   <Separator prefWidth="200.0" />
-                  <Button mnemonicParsing="false" prefHeight="76.0" prefWidth="226.0" style="-fx-background-color: #202a3a;" text="Button" textFill="#aea4a4" />
+                  <Button fx:id="send" mnemonicParsing="false" onAction="#send" prefHeight="76.0" prefWidth="226.0" style="-fx-background-color: #202a3a;" text="Something Missing??" textFill="#aea4a4">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
                </children>
             </VBox>
             <ImageView fx:id="rate1" fitHeight="40.0" fitWidth="58.0" layoutX="404.0" layoutY="312.0" pickOnBounds="true" preserveRatio="true">

@@ -106,8 +106,8 @@ public class SelectionController {
 			return;
 		}
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("../view/Overview.fxml"));
-			Main.stage.setScene(new Scene(root, 800, 800));
+			Parent root = FXMLLoader.load(getClass().getResource("../view/UserReview.fxml"));
+			Main.stage.setScene(new Scene(root, 1200, 1200));
 			Main.stage.show();
 
 		} catch(Exception e) {
