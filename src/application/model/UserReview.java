@@ -20,7 +20,7 @@ public class UserReview {
 	
 	public String toString() {
 		
-		String printIt =  userName + " rated this restroom " + restroomRating + "/5\nPopularity: " + commentPopularity + "\n\n";
+		String printIt =  userName + " rated this restroom " + restroomRating + "/5\n\n";
 		printIt += comment + "\n";
 		
 		return printIt;
