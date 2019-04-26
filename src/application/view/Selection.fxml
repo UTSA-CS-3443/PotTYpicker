@@ -17,8 +17,12 @@
                   <Image url="@../../../image/Toilet-2.png" />
                </image>
             </ImageView>
-            <Button fx:id="hover" layoutX="113.0" layoutY="207.0" mnemonicParsing="false" text="Button" />
-            <ComboBox fx:id="testing" layoutX="44.0" layoutY="308.0" prefWidth="150.0" />
+            <Button fx:id="BB" layoutX="75.0" layoutY="207.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="116.0" style="-fx-background-color: transparent;" text="BB" textFill="WHITE">
+               <font>
+                  <Font name="American Typewriter" size="13.0" />
+               </font></Button>
+            <Button fx:id="NPB" layoutX="79.0" layoutY="313.0" mnemonicParsing="false" prefHeight="46.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="NPB" textFill="WHITE" />
+            <Button fx:id="MH" layoutX="79.0" layoutY="431.0" mnemonicParsing="false" prefHeight="52.0" prefWidth="108.0" style="-fx-background-color: transparent;" text="MH" textFill="WHITE" />
          </children>
       </AnchorPane>
       <ComboBox fx:id="buildingDropDown" layoutX="75.0" layoutY="57.0" onAction="#pickBuilding" prefWidth="170.0" promptText="BUILDING" />
