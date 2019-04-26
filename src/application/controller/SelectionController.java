@@ -33,7 +33,7 @@ public class SelectionController {
 	AnchorPane app;
 	
 	@FXML
-	Button hover, BB, NPB, MH;
+	Button hover;
 	
 	
 	public static Restroom restroom;
@@ -74,61 +74,17 @@ public class SelectionController {
 //			System.out.println ("Hello");
 //		});
 //	}
+	
 	public void initialize() {
 		File buildings = new File("data");
-		File image_home = new File ("image");
 		for (File file : buildings.listFiles()) {
 			if (file.isDirectory()) {
 				buildingDropDown.getItems().add(new Building(file));
 			}
 		}
-		for (File f: image_home.listFiles()) {
-			if (BB.getText().equalsIgnoreCase(f.getName().substring(0,f.getName().length()-4))) {
-				Image image = new Image (f.toURI().toString());
-				ImageView imageview = new ImageView (image);
-				imageview.setFitHeight(250.0);
-				imageview.setFitWidth(300.0);
-				/* Place image in tooltip */
-				Tooltip tt = new Tooltip (); 
-				tt.setGraphic(imageview);
-				
-				/* Add hovering image to combobox items */
-				BB.setTooltip(tt);	
-				BB.setStyle("-fx-background-color: #333952");
-				BB.setFont(new Font("American Typewriter", 20));
-				BB.setTextFill(Color.web("#ffffff"));
-			}
-			if (NPB.getText().equalsIgnoreCase(f.getName().substring(0,f.getName().length()-4))) {
-				Image image = new Image (f.toURI().toString());
-				ImageView imageview = new ImageView (image);
-				imageview.setFitHeight(250.0);
-				imageview.setFitWidth(300.0);
-				/* Place image in tooltip */
-				Tooltip tt = new Tooltip (); 
-				tt.setGraphic(imageview);
-				
-				/* Add hovering image to combobox items */
-				NPB.setTooltip(tt);	
-				NPB.setStyle("-fx-background-color: #333952");
-				NPB.setFont(new Font("American Typewriter", 20));
-				NPB.setTextFill(Color.web("#ffffff"));
-			}
-			if (MH.getText().equalsIgnoreCase(f.getName().substring(0,f.getName().length()-4))) {
-				Image image = new Image (f.toURI().toString());
-				ImageView imageview = new ImageView (image);
-				imageview.setFitHeight(250.0);
-				imageview.setFitWidth(300.0);
-				/* Place image in tooltip */
-				Tooltip tt = new Tooltip (); 
-				tt.setGraphic(imageview);
-				
-				/* Add hovering image to combobox items */
-				MH.setTooltip(tt);	
-				MH.setStyle("-fx-background-color: #333952");
-				MH.setFont(new Font("American Typewriter", 20));
-				MH.setTextFill(Color.web("#ffffff"));
-			}
-		}
+		Button b = new Button ("This is it");
+		testing.getItems().addAll(b); 
+		System.out.println (testing.getSelectionModel().selectedItemProperty().getName());
 	}
 	/**
 	 * Moves to Login.fxml
