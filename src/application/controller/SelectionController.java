@@ -36,6 +36,7 @@ public class SelectionController {
 	
 	
 	public static Restroom restroom;
+	public static Building building;
 	
 //	public void initialize() throws FileNotFoundException {
 //		this.buttonMap = new HashMap();
@@ -100,11 +101,10 @@ public class SelectionController {
 	 * @param event The Go! button is pressed
 	 */
 	public void gotoReviews(ActionEvent event) {
-		/* If no selction, do nothing */
+		/* If no selection, do nothing */
 		if (SelectionController.restroom == null) {
 			return;
 		}
-		
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("../view/Overview.fxml"));
 			Main.stage.setScene(new Scene(root, 800, 800));
@@ -116,9 +116,9 @@ public class SelectionController {
 	}
 	
 	public void pickBuilding(ActionEvent event) {
-		Building building = this.buildingDropDown.getValue();
+		SelectionController.building = this.buildingDropDown.getValue();
 		this.restroomDropDown.getItems().clear();
-		this.restroomDropDown.getItems().addAll(building.getRestrooms());
+		this.restroomDropDown.getItems().addAll(SelectionController.building.getRestrooms());
 	}
 	
 	public void pickRestroom(ActionEvent event) {
