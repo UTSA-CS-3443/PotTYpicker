@@ -38,6 +38,7 @@ public class Restroom {
 		}
 	
 	
+	
 	public ArrayList<UserReview> getReviews() {
 		this.reviews.clear();
 		this.loadReviews();

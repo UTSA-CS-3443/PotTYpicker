@@ -55,7 +55,7 @@ public class UserReviewController {
 					double y = rate1.getY(); 
 					Image image = new Image (file.toURI().toString());
 					rate1.setImage(image);
-					this.rating_stars = this.rating_stars - 2; 
+					this.rating_stars -= 2; 
 					System.out.println(this.rating_stars);
 				}
 			}
@@ -69,7 +69,7 @@ public class UserReviewController {
 						Image image = new Image (file.toURI().toString());
 						rate1.setImage(image);
 
-						this.rating_stars = this.rating_stars + 1; 
+						this.rating_stars++; 
 					//this.rating_stars = this.rating_stars + 1;
 						this.rating_stars++; 
 						System.out.println(this.rating_stars);
@@ -126,7 +126,7 @@ public class UserReviewController {
 				if (file.getName().equalsIgnoreCase("empty.png")) {
 					Image image = new Image (file.toURI().toString());
 					rate4.setImage(image);
-					this.rating_stars = this.rating_stars - 2; 
+					this.rating_stars -= 2; 
 					System.out.println (this.rating_stars);
 
 				}
@@ -140,7 +140,7 @@ public class UserReviewController {
 						Image image = new Image (file.toURI().toString());
 						rate4.setImage(image);
 
-						this.rating_stars = this.rating_stars + 1; 
+						this.rating_stars++; 
 
 						//this.rating_stars = this.rating_stars + 1;
 						this.rating_stars++; 
@@ -201,7 +201,7 @@ public class UserReviewController {
 					Image image = new Image (file.toURI().toString());
 					rate5.setImage(image);
 
-					this.rating_stars = this.rating_stars - 2; 
+					this.rating_stars -= 2; 
 					System.out.println (this.rating_stars);
 				}
 			}
@@ -247,7 +247,6 @@ public class UserReviewController {
 		UserReview newReview = new UserReview(text_review.getText(), LoginController.user.toString(), this.rating_stars, 0);
 		newReview.writeReview(SelectionController.restroom);
 	}
-	
 	public void map_redirect () {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("../view/Map.fxml"));
