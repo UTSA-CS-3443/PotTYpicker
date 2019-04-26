@@ -13,11 +13,6 @@
    <children>
       <AnchorPane fx:id="father" layoutX="-10.0" layoutY="-1.0" prefHeight="800.0" prefWidth="854.0" style="-fx-background-color: #17222c;">
          <children>
-            <Label fx:id="roomNumber" layoutX="284.0" layoutY="16.0" prefHeight="33.0" prefWidth="135.0" text="Bathroom Number" textFill="WHITE">
-               <font>
-                  <Font name="American Typewriter" size="15.0" />
-               </font>
-            </Label>
             <VBox layoutX="12.0" layoutY="15.0" prefHeight="724.0" prefWidth="226.0">
                <children>
                   <Button fx:id="displayOverview" mnemonicParsing="false" onAction="#displayOverview" prefHeight="59.0" prefWidth="226.0" style="-fx-background-color: #202a3a;" text="Overview" textFill="#aea4a4">

@@ -10,9 +10,12 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import application.Main;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
 import javafx.geometry.Pos;
+import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -178,6 +181,15 @@ public class SendEmailController {
 
 		} catch (MessagingException e) {
 			throw new RuntimeException(e);
+		}
+		
+		try {
+			Parent root = FXMLLoader.load(getClass().getResource("../view/UserReview.fxml"));
+			Main.stage.setScene(new Scene(root, 800, 800));
+			Main.stage.show();
+
+		} catch(Exception e) {
+			e.printStackTrace();
 		}
 	}
 

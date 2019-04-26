@@ -45,7 +45,7 @@ public class MapController  {
 			Parent root;
 			try {
 				root = FXMLLoader.load(getClass().getResource("../view/UserReview.fxml"));
-				Main.stage.setScene(new Scene(root, 1000, 1000));
+				Main.stage.setScene(new Scene(root, 800, 800));
 				Main.stage.show();
 			} catch (IOException e1) {
 				// TODO Auto-generated catch block
@@ -56,7 +56,7 @@ public class MapController  {
 	public void go_back (ActionEvent Event) {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("../view/UserReview.fxml"));
-			Main.stage.setScene(new Scene(root, 1000, 1000));
+			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();
 
 		} catch(Exception e) {

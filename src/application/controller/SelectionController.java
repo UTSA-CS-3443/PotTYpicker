@@ -33,7 +33,7 @@ public class SelectionController {
 	AnchorPane app;
 	
 	@FXML
-	Button hover;
+	Button hover, BB, NPB, MH;
 	
 	
 	public static Restroom restroom;
@@ -74,17 +74,61 @@ public class SelectionController {
 //			System.out.println ("Hello");
 //		});
 //	}
-	
 	public void initialize() {
 		File buildings = new File("data");
+		File image_home = new File ("image");
 		for (File file : buildings.listFiles()) {
 			if (file.isDirectory()) {
 				buildingDropDown.getItems().add(new Building(file));
 			}
 		}
-		Button b = new Button ("This is it");
-		testing.getItems().addAll(b); 
-		System.out.println (testing.getSelectionModel().selectedItemProperty().getName());
+		for (File f: image_home.listFiles()) {
+			if (BB.getText().equalsIgnoreCase(f.getName().substring(0,f.getName().length()-4))) {
+				Image image = new Image (f.toURI().toString());
+				ImageView imageview = new ImageView (image);
+				imageview.setFitHeight(250.0);
+				imageview.setFitWidth(300.0);
+				/* Place image in tooltip */
+				Tooltip tt = new Tooltip (); 
+				tt.setGraphic(imageview);
+				
+				/* Add hovering image to combobox items */
+				BB.setTooltip(tt);	
+				BB.setStyle("-fx-background-color: #333952");
+				BB.setFont(new Font("American Typewriter", 20));
+				BB.setTextFill(Color.web("#ffffff"));
+			}
+			if (NPB.getText().equalsIgnoreCase(f.getName().substring(0,f.getName().length()-4))) {
+				Image image = new Image (f.toURI().toString());
+				ImageView imageview = new ImageView (image);
+				imageview.setFitHeight(250.0);
+				imageview.setFitWidth(300.0);
+				/* Place image in tooltip */
+				Tooltip tt = new Tooltip (); 
+				tt.setGraphic(imageview);
+				
+				/* Add hovering image to combobox items */
+				NPB.setTooltip(tt);	
+				NPB.setStyle("-fx-background-color: #333952");
+				NPB.setFont(new Font("American Typewriter", 20));
+				NPB.setTextFill(Color.web("#ffffff"));
+			}
+			if (MH.getText().equalsIgnoreCase(f.getName().substring(0,f.getName().length()-4))) {
+				Image image = new Image (f.toURI().toString());
+				ImageView imageview = new ImageView (image);
+				imageview.setFitHeight(250.0);
+				imageview.setFitWidth(300.0);
+				/* Place image in tooltip */
+				Tooltip tt = new Tooltip (); 
+				tt.setGraphic(imageview);
+				
+				/* Add hovering image to combobox items */
+				MH.setTooltip(tt);	
+				MH.setStyle("-fx-background-color: #333952");
+				MH.setFont(new Font("American Typewriter", 20));
+				MH.setTextFill(Color.web("#ffffff"));
+			}
+		}
 	}
 	/**
 	 * Moves to Login.fxml
@@ -109,8 +153,8 @@ public class SelectionController {
 			return;
 		}
 		try {
-			Parent root = FXMLLoader.load(getClass().getResource("../view/UserReview.fxml"));
-			Main.stage.setScene(new Scene(root, 1000, 1000));
+			Parent root = FXMLLoader.load(getClass().getResource("../view/Overview.fxml"));
+			Main.stage.setScene(new Scene(root, 800, 800));
 			Main.stage.show();
 
 		} catch(Exception e) {

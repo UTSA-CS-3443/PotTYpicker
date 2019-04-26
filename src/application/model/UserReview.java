@@ -41,10 +41,8 @@ public class UserReview {
 	}
 	
 	public String toString() {
-		
 		String printIt =  userName + " rated this restroom " + restroomRating + "/5\n\n";
-		printIt += comment + "\n";
-		
+		printIt += comment + "\n";		
 		return printIt;
 	}
 
