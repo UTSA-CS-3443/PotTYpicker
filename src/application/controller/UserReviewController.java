@@ -4,6 +4,7 @@ import java.io.File;
 import java.io.IOException;
 
 import application.Main;
+import application.model.UserReview;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -37,7 +38,7 @@ public class UserReviewController {
 	@FXML
 	Label after_submit; 
 	@FXML
-	AnchorPane father; 
+	AnchorPane father;
 	private int count_click1; 
 	private int rating_stars; 
 
@@ -208,10 +209,11 @@ public class UserReviewController {
 		after_submit.setText("Your review submitted successfully");
 		after_submit.setFont(new Font("American Typewriter", 15));
 		after_submit.setTextFill(Color.web("#32CD32"));
-		TextField name = new TextField ();
-		name.setText(String.valueOf(this.rating_stars + "/5"));
-		father.getChildren().add(name);
+		
+		UserReview newReview = new UserReview(text_review.getText(), LoginController.user.toString(), this.rating_stars, 0);
+		newReview.writeReview(SelectionController.restroom);
 	}
+	
 	public void map_redirect () {
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("../view/Map.fxml"));

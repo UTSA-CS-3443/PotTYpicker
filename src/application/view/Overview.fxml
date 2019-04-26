@@ -7,10 +7,11 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.OverviewController">
    <children>
-      <Button layoutX="33.0" layoutY="744.0" mnemonicParsing="false" text="Leave a Review" />
+      <Button layoutX="33.0" layoutY="744.0" mnemonicParsing="false" onAction="#gotoUserReview" text="Leave a Review" />
       <ListView fx:id="commentView" layoutX="283.0" layoutY="142.0" prefHeight="371.0" prefWidth="418.0" />
       <Label fx:id="roomNumber" layoutX="102.0" layoutY="52.0" text="Restoom room #" />
       <Label layoutX="283.0" layoutY="112.0" text="User Reviews" />
       <Label fx:id="buildingLabel" layoutX="102.0" layoutY="24.0" text="Building" />
+      <Button fx:id="gotoLogin" layoutX="672.0" layoutY="28.0" mnemonicParsing="false" text="Logout" />
    </children>
 </AnchorPane>

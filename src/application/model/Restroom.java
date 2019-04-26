@@ -45,7 +45,6 @@ public class Restroom {
 		for (File file : this.dir.listFiles()) {
 			String userName = file.getName().replaceFirst("[.][^.]+$", "");
 			try {
-				System.out.println(file.getAbsolutePath());
 				String[] data = readComment(file);
 				this.reviews.add(new UserReview(data[2], userName, Integer.parseInt(data[1]), Integer.parseInt(data[0])));
 			} catch (IOException e) {
@@ -69,8 +68,6 @@ public class Restroom {
 		}
 		reviewScan.close();
 		data[2] = comment.toString();
-		for (int i=0; i<3; i++)
-			System.out.println(i + ": " + data[i]);
 		return data;
 	}
 }
