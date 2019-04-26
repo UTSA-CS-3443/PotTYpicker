@@ -132,7 +132,7 @@ public class SendEmailController {
 	public void SubmitRequest (ActionEvent Event) {
 		String to = "leereese3@gmail.com";
 
-		// Sender's email ID needs to be mentioned
+		// Sender's email ID needs to be mentioned, Dummy account
 		String from = "muahua51@gmail.com";
 		final String username = "muahua51@gmail.com";//change accordingly
 		final String password = "Really!.";//change accordingly

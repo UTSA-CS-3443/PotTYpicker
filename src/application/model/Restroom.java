@@ -9,42 +9,41 @@ public class Restroom {
 	private File dir;
 	private String roomNumber;
 	private ArrayList<UserReview> reviews;
-	
+
 	public Restroom(File file) {
 		this.dir = file;
 		this.roomNumber = dir.getName();
 		this.reviews = new ArrayList<UserReview>();
 		loadReviews();
 	}
+	public String toString() {
+		return this.roomNumber;
+	}
 
-		public String toString() {
-			return this.roomNumber;
-		}
+	public String getRoomNumber() {
+		return this.roomNumber;
+	}
 
-		public String getRoomNumber() {
-			return this.roomNumber;
-		}
+	public void setName(String roomNumber) {
+		this.roomNumber = roomNumber;
+	}
 
-		public void setName(String roomNumber) {
-			this.roomNumber = roomNumber;
-		}
+	public File getDir() {
+		return this.dir;
+	}
 
-		public File getDir() {
-			return this.dir;
-		}
+	public void setDir(File dir) {
+		this.dir = dir;
+	}
 
-		public void setDir(File dir) {
-			this.dir = dir;
-		}
-	
-	
-	
+
+
 	public ArrayList<UserReview> getReviews() {
 		this.reviews.clear();
 		this.loadReviews();
 		return this.reviews;
 	}
-	
+
 	private void loadReviews() {
 		for (File file : this.dir.listFiles()) {
 			String userName = file.getName().replaceFirst("[.][^.]+$", "");
@@ -56,15 +55,15 @@ public class Restroom {
 			}
 		}
 	}
-	
+
 	private String[] readComment(File review) throws IOException {
 		String[] data = {"", "", ""};
 		Scanner reviewScan = new Scanner(review);
-		
+
 		/* Get popularity and rating */
 		data[0] = reviewScan.nextLine();
 		data[1] = reviewScan.nextLine();
-		
+
 		/* Get comment body */
 		StringBuilder comment = new StringBuilder();
 		while(reviewScan.hasNextLine()) {

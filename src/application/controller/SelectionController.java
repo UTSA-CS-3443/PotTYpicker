@@ -27,7 +27,8 @@ public class SelectionController {
 	
 	@FXML
 	ComboBox<Restroom> restroomDropDown;
-	
+	@FXML
+	ComboBox<Button> testing; 
 	@FXML
 	AnchorPane app;
 	
@@ -81,8 +82,10 @@ public class SelectionController {
 				buildingDropDown.getItems().add(new Building(file));
 			}
 		}
+		Button b = new Button ("This is it");
+		testing.getItems().addAll(b); 
+		System.out.println (testing.getSelectionModel().selectedItemProperty().getName());
 	}
-	
 	/**
 	 * Moves to Login.fxml
 	 * @param event
@@ -107,7 +110,7 @@ public class SelectionController {
 		}
 		try {
 			Parent root = FXMLLoader.load(getClass().getResource("../view/UserReview.fxml"));
-			Main.stage.setScene(new Scene(root, 1200, 1200));
+			Main.stage.setScene(new Scene(root, 1000, 1000));
 			Main.stage.show();
 
 		} catch(Exception e) {
