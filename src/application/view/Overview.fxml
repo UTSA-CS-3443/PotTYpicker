@@ -12,6 +12,6 @@
       <Label fx:id="roomNumber" layoutX="102.0" layoutY="52.0" text="Restoom room #" />
       <Label layoutX="283.0" layoutY="112.0" text="User Reviews" />
       <Label fx:id="buildingLabel" layoutX="102.0" layoutY="24.0" text="Building" />
-      <Button fx:id="gotoLogin" layoutX="672.0" layoutY="28.0" mnemonicParsing="false" text="Logout" />
+      <Button layoutX="672.0" layoutY="28.0" mnemonicParsing="false" onAction="#gotoLogin" text="Logout" />
    </children>
 </AnchorPane>
