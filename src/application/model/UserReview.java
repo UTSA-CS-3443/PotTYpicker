@@ -7,7 +7,7 @@ import java.io.IOException;
 /**
  * The review class represents the user review on the RestRoom. The user review includes the actual comment, the name of the user,
  * a bathroom rating based on a 0 to 5 scale, and an overall score based on upvotes and downvotes.
- * @author The Walking Data Structures
+ * @author Diego Reyes (huh550) and edited by Lee Reese 
  */
 public class UserReview {
 	
@@ -23,6 +23,11 @@ public class UserReview {
 		this.setCommentPopularity(popularity);
 	}
 	
+	/**
+	 * The function writeReview takes a Restroom object as a parameter and allows
+	 * user to write review on the specified restroom.
+	 * @param restroom
+	 */
 	public void writeReview(Restroom restroom) {
 		String fileName = this.getUserName() + ".txt";
 		fileName = restroom.getDir().getAbsolutePath() + "/" + fileName;
@@ -40,6 +45,10 @@ public class UserReview {
 		}
 	}
 	
+	/**
+	 * toString shows user rating and comment on the restroom 
+	 * 
+	 */
 	public String toString() {
 		String printIt =  userName + " rated this restroom " + restroomRating + "/5\n\n";
 		printIt += comment + "\n";		
