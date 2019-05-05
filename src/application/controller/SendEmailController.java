@@ -110,14 +110,14 @@ public class SendEmailController {
 	 */
 	public void SubmitRequest (ActionEvent Event) {
 		//You can change to your email for testing. 
-		String to = "zpp390@my.utsa.edu";
+		String to = "Your Email";
 
-		// Sender's email ID needs to be mentioned, Dummy account
+		// Sender's email ID needs to be mentioned, (Dummy Email account)
 		String from = "muahua51@gmail.com";
 		final String username = "muahua51@gmail.com";//change accordingly
 		final String password = "Really!.";//change accordingly
 
-		// Assuming you are sending email through relay.jangosmtp.net
+		// Assuming you are sending email through imap.gmail.com
 		String host = "imap.gmail.com";
 
 		Properties props = new Properties();

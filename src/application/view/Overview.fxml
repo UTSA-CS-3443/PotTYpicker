@@ -8,7 +8,7 @@
 
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="800.0" style="-fx-background-color: #333952;" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.controller.OverviewController">
    <children>
-      <Button layoutX="33.0" layoutY="744.0" mnemonicParsing="false" onAction="#gotoUserReview" text="Leave a Review" />
+      <Button layoutX="33.0" layoutY="634.0" mnemonicParsing="false" onAction="#gotoUserReview" text="Leave a Review" />
       <ListView fx:id="commentView" layoutX="99.0" layoutY="142.0" prefHeight="371.0" prefWidth="602.0" />
       <Label fx:id="roomNumber" layoutX="102.0" layoutY="52.0" text="Restoom room #" textFill="WHITE">
          <font>
