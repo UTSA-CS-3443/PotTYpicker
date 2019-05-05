@@ -14,7 +14,7 @@ PotTYpicker is your go-to application for user rated reviews on the best and the
 
 	username: a
 	
-	password: a
+	password: b
 	
 # About JavaMail API:
 	[JavaMail API](https://javaee.github.io/javamail/)
