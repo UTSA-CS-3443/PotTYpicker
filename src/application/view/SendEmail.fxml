@@ -50,7 +50,7 @@
             <Font name="American Typewriter" size="19.0" />
          </font>
       </Button>
-      <TextField fx:id="display" layoutX="63.0" layoutY="409.0" prefHeight="197.0" prefWidth="704.0" promptText="Please click on icon according to your need or type in this box for others. ">
+      <TextField fx:id="display" layoutX="63.0" layoutY="409.0" prefHeight="197.0" prefWidth="704.0" promptText="Please click on an icon according to your need or type in this box for others. ">
          <font>
             <Font size="18.0" />
          </font>

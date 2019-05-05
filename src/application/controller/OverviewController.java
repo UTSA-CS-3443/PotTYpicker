@@ -19,6 +19,9 @@ public class OverviewController {
 	@FXML
 	Label roomNumber, buildingLabel;
 	
+	/**
+	 * @void initilize
+	 */
 	public void initialize() {
 		this.buildingLabel.setText(SelectionController.building.toString());
 		this.roomNumber.setText(SelectionController.restroom.toString());
@@ -26,11 +29,15 @@ public class OverviewController {
 		updateList();
 	}
 	
+	/**
+	 * @void UpdateList
+	 */
 	private void updateList() {
 		ObservableList<UserReview> reviews = FXCollections.observableArrayList();
 		reviews.addAll(SelectionController.restroom.getReviews());
 		commentView.getItems().clear();
 		commentView.getItems().addAll(reviews);
+		commentView.setStyle("-fx-control-inner-background: #2A293E ; -fx-font-family: Consolas; -fx-highlight-fill: #00ff00; -fx-text-fill: #FF0000; -fx-background-insets: 0  ");
 	}
 	
 	/**
