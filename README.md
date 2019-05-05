@@ -17,7 +17,7 @@ PotTYpicker is your go-to application for user rated reviews on the best and the
 	password: b
 	
 # About JavaMail API:
-	[JavaMail API](https://javaee.github.io/javamail/)
+* [JavaMail API](https://javaee.github.io/javamail/) - Used for Email Feature
 # Java GUI Components
 	JavaFX
 	Scene builder 2.0
@@ -26,7 +26,7 @@ PotTYpicker is your go-to application for user rated reviews on the best and the
 $ git pull or git clone https://github.com/UTSA-CS-3443/PotTYpicker.git
 $ cd path/to/your/directory
 $ import you project to Eclipse
-$ right click(Window) or Command + I(MAC) on your project > properties > Java Build Path > Libraries > Add External Jars > path/to/your/project/mailactivation/add all the jars  
+$ Right Click(Window) or Command + I(MAC) on your project > Properties > Java Build Path > Libraries > Add External Jars > path/to/your/project/mailactivation/add all the jars  
 
 ```    
 ## Demo
